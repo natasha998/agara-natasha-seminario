@@ -1,0 +1,16 @@
+<!---Va a tener una directiva que atravez de la interfaz y el objeto va a insertar la info segun la posición-->
+<p id="ancla"></p>
+<ul *ngFor="let disc of discs">
+    <li>
+        <div>
+            <div class="img-disc"><img [src]=""></div>
+            <ul>
+                <li>{{disc.name}}</li>
+                <li>$<span>{{disc.price}}</span> </li>
+                <li *ngIf="disc.stock==0">Sin stock</li>
+            </ul>
+            <button class="agregar" [routerLink]="['/store']">Agregar al carrito</button>
+        </div>
+    </li>
+</ul>
+<app-disc-comment></app-disc-comment>
