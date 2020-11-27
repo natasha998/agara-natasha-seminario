@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
 import { DiscCardService } from '../disc-card.service';
 import { Disc } from '../d-list';
 
@@ -9,10 +10,14 @@ import { Disc } from '../d-list';
 })
 export class DiscStoreComponent implements OnInit {
   
+  @Input() 
+
+  discPos : any;//no devuelve un pingo ----SOLUCIONAR-----
+  
   
   constructor() { }
 
   ngOnInit(): void {
   }
-  
+
 }

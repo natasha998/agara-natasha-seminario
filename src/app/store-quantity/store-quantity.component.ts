@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DiscCardService } from '../disc-card.service';
 
 @Component({
@@ -9,8 +9,26 @@ import { DiscCardService } from '../disc-card.service';
 export class StoreQuantityComponent implements OnInit {
 
   constructor(private cart: DiscCardService) { }
+  
+  @Input ()
+  quantity: number;
+
+  @Input () 
+  max: number;
 
   ngOnInit(): void {
   }
+
+  upQuantity(): void {
+    if(this.quantity < this.max){
+      this.quantity++;
+    }
+  }
+
+   downQuantity(): void {
+     if(this.quantity > 0){
+       this.quantity--;
+     }
+   }
 
 }

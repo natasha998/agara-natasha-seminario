@@ -1,15 +1,14 @@
 <div class="cart-disc">
-    <div>
-        <img src="" alt="">
+    <div class="img-disc">
+        <img src="aseets/img/ramones.jpg" alt="">
     </div>
-    <div>
+    <div class="info-disc">
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>{{discPos.name}}</li>
+            <li>{{discPos.type}}</li>
+            <li>{{discPos.price}}</li>
             <li>
-               <app-store-quantity></app-store-quantity>
+               <app-store-quantity [quantity]="discPos.quantity" [max]="discPos.stock" *ngIf="discPos.stock"></app-store-quantity>
             </li>
         </ul>
     </div>

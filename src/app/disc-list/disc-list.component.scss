@@ -1,0 +1,39 @@
+.info-disc{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #000; 
+}
+
+.disc-card{
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+    align-items: center;
+    border: 3px solid #000;
+    li{
+        list-style: none; 
+        font-size: 20px;
+        padding: 10px 0px;
+        button{
+            padding: 5px;
+            background-color: rosybrown;
+            font-size: 15px;
+        }
+        button:hover{
+            color: wheat;
+            border-bottom: 3px solid yellowgreen;
+        }
+    } 
+}
+
+.img-disc{
+    width: 150px;
+    height: 150px;
+    padding-bottom: 5px;
+    background-color: teal;
+    box-shadow: 10px 5px 5px rgba($color: #000000, $alpha: 0.5);
+    img{
+        width: 150px;
+    }
+}

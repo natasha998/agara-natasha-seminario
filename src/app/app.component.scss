@@ -1,0 +1,32 @@
+header{
+    background-color: aqua;
+    nav{
+        background-color: burlywood;
+        .nav-bar{
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+            li{
+                list-style: none;
+                color: cadetblue;
+                padding: 20px;
+                font-size: "40px";
+            } 
+            li a{
+                text-decoration: none;
+            }
+            img{
+                width: 200px;
+            };
+        }
+    }
+}
+footer{
+    background-color: #768694;
+    width:100%;
+    padding: 50px;
+    p{
+        font-weight: bolder;
+        font-size: 20px;
+    }
+}
