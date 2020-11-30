@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-disc-comment-user',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DiscCommentUserComponent implements OnInit {
 
-  constructor() { }
+  textArea : EventEmitter<string> = new EventEmitter<string>();
 
+  constructor() { }
+  
   ngOnInit(): void {
   }
+
+  inserText(text: string){
+    this.textArea.emit(text);
+  }
+
 
 }

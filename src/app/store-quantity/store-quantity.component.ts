@@ -9,7 +9,7 @@ import { DiscCardService } from '../disc-card.service';
 export class StoreQuantityComponent implements OnInit {
 
   constructor(private cart: DiscCardService) { }
-  
+
   @Input ()
   quantity: number;
 

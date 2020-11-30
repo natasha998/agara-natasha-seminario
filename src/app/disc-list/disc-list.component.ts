@@ -1,8 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
-import { DiscCardService } from '../disc-card.service';
+import { Component, OnInit  } from '@angular/core';
 import { Disc } from '../d-list';
-import { discardPeriodicTasks } from '@angular/core/testing';
 
 @Component({
   selector: 'app-disc-list', 
@@ -13,6 +10,7 @@ export class DiscListComponent implements OnInit {
   
   discs: Disc[] = [
     {
+      numberDisc : 1,
       name : 'Ramones-Ramones',
       type : 'Nuevo',
       price : 3.948,
@@ -21,69 +19,29 @@ export class DiscListComponent implements OnInit {
       image : 'assets/img/ramones.jpg'
     },
     {
-      name : 'Divididos',
-      type : 'usado',
+      numberDisc : 2,
+      name : 'Ramones-Ramones',
+      type : 'Nuevo',
       price : 3.948,
       quantity: 0,
       stock : 5,
-      image : '',
+      image : 'assets/img/ramones.jpg'
     },
     {
-      name : 'Divididos',
-      type : 'usado',
+      numberDisc : 2,
+      name : 'Ramones-Ramones',
+      type : 'Nuevo',
       price : 3.948,
       quantity: 0,
       stock : 5,
-      image : '',
-    },
-    {
-      name : 'Divididos',
-      type : 'usado',
-      price : 3.948,
-      quantity: 0,
-      stock : 5,
-      image : '',
-    },
-    {
-      name : 'Divididos',
-      type : 'usado',
-      price : 3.948,
-      quantity: 0,
-      stock : 5,
-      image : '',
-    },
-    {
-      name : 'Divididos',
-      type : 'usado',
-      price : 3.948,
-      quantity: 0,
-      stock : 5,
-      image : '',
-    },
-    {
-      name : 'Divididos',
-      type : 'usado',
-      price : 3.948,
-      quantity: 0,
-      stock : 5,
-      image : '',
-    },{
-      name : 'Divididos',
-      type : 'usado',
-      price : 3.948,
-      quantity: 0,
-      stock : 5,
-      image : '',
-    },{
-      name : 'Divididos',
-      type : 'usado',
-      price : 3.948,
-      quantity: 0,
-      stock : 5,
-      image : '',
+      image : 'assets/img/ramones.jpg'
     }
-
+    
   ];
+
+  discInfo: any;
+  mostrar :boolean;
+  posView : number;
 
   constructor() {
    }
@@ -91,13 +49,12 @@ export class DiscListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  //Me esta devolviendo el objeto de esa posicion 
-  onInfoDisc(discPos){
-    console.log(discPos.name);
-    console.log(discPos.type);
-    console.log(discPos.stock);
-    return discPos;
+  infoCardDisc(discData){
+    this.discInfo = discData;
   }
 
-
+  viewData(number){
+    this.posView = number;
+    this.mostrar = true;
+  }
 }

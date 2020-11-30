@@ -1,4 +1,5 @@
 export interface Disc{
+    numberDisc : number;
     name : string;//nombre disco
     price : number;//precio 
     type : string;//si es nuevo o usado
