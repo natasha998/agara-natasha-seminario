@@ -11,7 +11,7 @@
                 </ul>
             </div>
         </li>
-        <li>
+        <li *ngIf="disc.stock!=0">
             <button (click)="infoCardDisc(disc);viewData(disc.numberDisc);" >Ver detalle</button>
              <div *ngIf="mostrar && disc.numberDisc==posView">
                 <app-disc-store [discData]="disc"></app-disc-store>
@@ -19,4 +19,3 @@
         </li>
     </ul>
 </div>
-<app-disc-comment></app-disc-comment>

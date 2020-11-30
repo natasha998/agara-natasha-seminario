@@ -8,20 +8,20 @@ import { Disc } from '../d-list';
   styleUrls: ['./disc-store.component.scss']
 })
 export class DiscStoreComponent implements OnInit {
+  
+  mostrarBtn = false;
 
   @Input()
   discData: any;
-  
-  discCard: DiscCardService;
 
-  constructor(private card: DiscCardService) { }
+  constructor(private carr: DiscCardService) { }
 
 
   ngOnInit(): void {
   }
 
-  addToCard(disc): void{
-    this.discCard.addToCart(disc);
+  addToCart(disc): void{
+    this.carr.addCarStore(disc);
     disc.stock -= disc.quantity;
     disc.quantity = 0;
   }

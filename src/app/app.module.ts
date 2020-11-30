@@ -3,24 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { DiscListComponent } from './disc-list/disc-list.component';
 import { DiscStoreComponent } from './disc-store/disc-store.component';
-import { DiscCommentComponent } from './disc-comment/disc-comment.component';
-import { DiscCommentUserComponent } from './disc-comment-user/disc-comment-user.component';
 import { StoreQuantityComponent } from './store-quantity/store-quantity.component';
+import { CarStoreComponent } from './car-store/car-store.component';
+
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     DiscListComponent,
     DiscStoreComponent,
-    DiscCommentComponent,
-    DiscCommentUserComponent,
-    StoreQuantityComponent
+    StoreQuantityComponent,
+    CarStoreComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

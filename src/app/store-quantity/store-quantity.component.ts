@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Disc } from '../d-list';
 import { DiscCardService } from '../disc-card.service';
 
 @Component({
@@ -9,6 +10,9 @@ import { DiscCardService } from '../disc-card.service';
 export class StoreQuantityComponent implements OnInit {
 
   constructor(private cart: DiscCardService) { }
+  
+  @Input ()
+  disc: Disc;
 
   @Input ()
   quantity: number;
@@ -19,16 +23,26 @@ export class StoreQuantityComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upQuantity(): void {
-    if(this.quantity < this.max){
-      this.quantity++;
+  upQuantity(disc: Disc): void {
+    if(disc.stock < this.max){
+      disc.quantity++;
     }
   }
 
-   downQuantity(): void {
-     if(this.quantity > 0){
-       this.quantity--;
+   downQuantity(disc: Disc): void {
+     if(disc.quantity > 0){
+       disc.quantity--;
      }
    }
+
+   changeQuantity(event, disc: Disc): void{
+    if(event.code < disc.stock){
+      event.preventDefaul();
+    }
+
+   }
+
+
+    
 
 }

@@ -15,25 +15,25 @@ export class DiscListComponent implements OnInit {
       type : 'Nuevo',
       price : 3.948,
       quantity: 0,
-      stock : 5,
+      stock : 0,
       image : 'assets/img/ramones.jpg'
     },
     {
       numberDisc : 2,
-      name : 'Ramones-Ramones',
+      name : 'Divididos',
       type : 'Nuevo',
-      price : 3.948,
-      quantity: 0,
-      stock : 5,
+      price : 3.009,
+      quantity: 4,
+      stock : 4,
       image : 'assets/img/ramones.jpg'
     },
     {
-      numberDisc : 2,
+      numberDisc : 3,
       name : 'Ramones-Ramones',
       type : 'Nuevo',
       price : 3.948,
-      quantity: 0,
-      stock : 5,
+      quantity: 3,
+      stock : 3,
       image : 'assets/img/ramones.jpg'
     }
     

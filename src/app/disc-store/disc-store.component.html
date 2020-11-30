@@ -8,10 +8,12 @@
             <li>{{discData.type}}</li>
             <li>{{discData.price}}</li> 
             <li>
-               <app-store-quantity [quantity]="discData.quantity" [max]="discData.stock" *ngIf="discData.stock"></app-store-quantity>
-                <button (click)="addToCard(discData)"></button>
+               <app-store-quantity [disc]="discData" [max]="discData.quantity" *ngIf="discData.stock"></app-store-quantity>
+                <button (click)="addToCart(discData);mostrarBtn=true">Agregar al carrito</button>
+                <button  *ngIf="mostrarBtn" [routerLink]="['/store']">Ver carrito</button>
             </li>
         </ul>
     </div>
 
 </div>
+

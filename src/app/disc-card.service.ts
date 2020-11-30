@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { Disc } from './d-list';
 
 @Injectable({
@@ -6,17 +7,19 @@ import { Disc } from './d-list';
 })
 
 export class DiscCardService {
-  recordsList: Disc[] = [];
+
+  private _recordsList : Disc [] = [];
+  recordsList: BehaviorSubject<Disc[]> = new BehaviorSubject ([]);
 
   constructor() { }
 
-  addToCart(disc: Disc) {
-    let item:Disc = this.recordsList.find((v1) => v1.name == disc.name)
+  addCarStore(disc: Disc) {
+    let item:Disc = this._recordsList.find((v1) => v1.name == disc.name)
     if(!item) {
-      this.recordsList.push({ ... disc});
+      this._recordsList.push({ ... disc});
     }else{
       item.quantity += disc.quantity;
     }
+    this.recordsList.next(this._recordsList);
   }
-  
 }
