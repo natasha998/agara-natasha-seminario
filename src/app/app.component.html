@@ -1,15 +1,15 @@
-<!-- Voy a tener 2 componenetes padres (comentarios,discos)---en la parte de los dicos voy a tener
-   la info por interfaz  y servicio, en una ul con un ng for--- puede que los comentarios sean de
-    la misma manera y dos componentes hijos(input del user,carrito de compras)
--->
 <header>
-  <nav>
-    <ul class="nav-bar">
-      <li><img src="../assets/pngwing.com.png" alt=""></li>
-      <li><a [routerLink]="['/nosotros']">Nosotros</a></li>
-      <li><a href="#ancla">Lista de discos</a></li>
+  <div class="image-header">
+    <img src="../assets/disco-vinilo.jpg" alt="">
+  </div>
+  <nav >
+    <ul>
+      <li><a href="#home" [routerLink]="['/home']" class="nav-bar">Home</a></li>
+      <li><a href="#listaDiscos" class="nav-bar">Discos</a></li>
+      <li><a [routerLink]="['/store']" class="carrito" title="Ver tus compras"><img src="../assets/compra.png" alt="compras"></a></li>
     </ul>
   </nav>
+
 </header>
 <div class="container">
   <router-outlet></router-outlet>

@@ -1,21 +1,41 @@
-<p id="ancla"></p>
-<div class="info-disc">
-    <ul class="disc-card" *ngFor="let disc of discs">
-        <li>
-            <div>
-                <div class="img-disc"><img [src]="disc.image"></div>
-                <ul>
-                    <li>{{disc.name}}</li>
-                    <li>$<span>{{disc.price}}</span></li>
-                    <li *ngIf="disc.stock==0">Sin stock</li>
-                </ul>
-            </div>
-        </li>
-        <li *ngIf="disc.stock!=0">
-            <button (click)="infoCardDisc(disc);viewData(disc.numberDisc);" >Ver detalle</button>
-             <div *ngIf="mostrar && disc.numberDisc==posView">
-                <app-disc-store [discData]="disc"></app-disc-store>
-              </div>
-        </li>
-    </ul>
+<div id="home" class="relleno">
+    <h3>Lorem, ipsum dolor.</h3>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam et exercitationem minima cum, reiciendis
+      distinctio culpa debitis officiis quae non unde vero aspernatur tempora asperiores mollitia similique explicabo quam
+      aliquam accusamus consequuntur repudiandae eum? Quas cum consequuntur aspernatur neque, modi ex omnis dolor repellat
+      maxime, cumque doloremque sequi ea fuga? Eos perspiciatis fugit cum explicabo iste illo molestias dicta porro
+      delectus? Sint corporis sapiente labore distinctio dolores ea mollitia iusto quo. Expedita, repellat nemo!
+      Temporibus dolores quasi officia sunt, suscipit, ex omnis praesentium dolore nam iure possimus delectus animi
+      tempora? Ipsam repudiandae cum, minima tenetur itaque eos doloremque, magnam consectetur inventore quidem eaque ex
+      soluta sit corporis similique! Corrupti, voluptatem! Aliquam perspiciatis facere, quod ut assumenda molestiae modi
+      obcaecati dolore in minima iste corporis tenetur ipsa sint, fugit cupiditate animi? Sapiente illum eligendi dolore
+      laborum, est dolor, ad adipisci dicta, ipsa iusto asperiores aliquid cum! Esse ea numquam officia possimus
+      laboriosam id facilis corporis quas aperiam vero labore nisi ipsam, atque consectetur ratione error fuga. Modi quo
+      vel eius. Aut omnis saepe nemo modi laboriosam totam vitae non explicabo unde, eligendi velit ea, quo in,
+      reprehenderit natus laudantium ullam alias architecto amet. Eius neque iste temporibus veniam odit dolorum
+      accusantium ullam doloremque accusamus!</p>
+  </div>
+<div class="container">
+    <div id="listaDiscos"></div>
+    <div class="info-disc" *ngFor="let disc of discs">
+        <ul class="disc-card">
+            <li>
+                <div>
+                    <div class="img-disc"><img [src]="disc.image"></div>
+                    <ul>
+                        <li><p>{{disc.name}}</p></li>
+                        <li *ngIf="disc.stock==0"><p class="outOf">Sin stock</p></li>
+                        <li *ngIf="disc.stock!=0">
+                            <button (click)="infoCardDisc(disc);viewData(disc.numberDisc);" >Ver detalle</button>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="data-disc">
+                <div *ngIf="toShow && disc.numberDisc==posView">
+                    <app-disc-store [discData]="disc" [showData]="toShow"></app-disc-store>
+                  </div>
+            </li>
+        </ul>
+    </div>
 </div>

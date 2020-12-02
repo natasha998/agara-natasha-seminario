@@ -1,6 +1,6 @@
 <div class="input-store">
     <button (click)="downQuantity(disc)">-</button>
-    <input type="number" [(ngModel)]="disc.quantity" (keyup)="changeQuantity($event, disc)" >
+    <input type="number" [(ngModel)]="disc.quantity" (keyup)="changeQuantity(disc)" >
     <button (click)="upQuantity(disc)">+</button>
 </div>
 

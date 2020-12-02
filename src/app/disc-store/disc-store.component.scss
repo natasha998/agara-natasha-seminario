@@ -1,19 +1,60 @@
-.hide-data{
-    display: none;
-}
-.data-disc{
+.disc-data{
     display: block;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-}
+    width: 600px;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0a383e+0,053641+50,073139+51,023040+100 */
+    background: rgb(10,56,62); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(10,56,62,1) 0%, rgba(5,54,65,1) 50%, rgba(7,49,57,1) 51%, rgba(2,48,64,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  rgba(10,56,62,1) 0%,rgba(5,54,65,1) 50%,rgba(7,49,57,1) 51%,rgba(2,48,64,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  rgba(10,56,62,1) 0%,rgba(5,54,65,1) 50%,rgba(7,49,57,1) 51%,rgba(2,48,64,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0a383e', endColorstr='#023040',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    position: fixed;
+    top: 210px;
+    right: 118px;
+    padding: 5px;
+    .close-btn{
+        width: 30px;
+        font-weight: bolder;
+        float: right;
+    }
+    .content-disc{
+        display: flex;
+        flex-direction: row;
+        margin: 20px;
+    }
+    .img-disc img{
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.493);
+        padding: 5px;
+        border: 1px solid #000000;
+    }
+    
+    .info-disc ul{
+        margin: 10px;
+        li{
+            color:#f0eafd ;
+            list-style: none;
+            padding: 5px;
+            font-size: 20px;
+            h4{
+                font-size: 30px;
+            }
+        }
+    }
 
-.img-disc{
-    width: 250px;
-    height: 250px;
-    background-color: yellowgreen;
-}
+    button{
+        display: block;
+        margin: 5px;
+        padding: 5px;
+        color:  #f0eafd ;
+        background-color: #81e0e091;
+        border: #262335 1px solid;
+        border-radius: 4px 3px 6px / 2px 4px;
+    }
+    button:hover{
+        background-color:#f0eafd ;
+        color:#262335;
+    }
 
-.info-disc{
-    border: 2px solid #fff;
+        
+    
 }

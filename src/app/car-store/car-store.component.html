@@ -1,13 +1,17 @@
-<p>Hii men</p>
-<table>
+<p>Tus compras:</p>
+<table class="table">
     <thead>
+      <tr>
         <th>Disco</th>
         <th>Cantidad</th>
         <th>Precio</th>
+      </tr>
     </thead>
     <tbody *ngFor="let item of recordsList$ | async">
+      <tr>
         <td>{{item.name}}</td>
         <td>{{item.quantity}}</td>
         <td>$<samp>{{item.price * item.quantity}}</samp></td>
+      </tr>
     </tbody>
-</table>
+  </table>

@@ -9,11 +9,14 @@ import { Disc } from '../d-list';
 })
 export class DiscStoreComponent implements OnInit {
   
-  mostrarBtn = false;
-
   @Input()
   discData: any;
 
+  @Input()
+  showData: boolean;
+
+  toShow = true;
+  
   constructor(private carr: DiscCardService) { }
 
 

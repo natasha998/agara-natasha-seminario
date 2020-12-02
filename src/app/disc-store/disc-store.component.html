@@ -1,19 +1,24 @@
-<div>
-    <div class="img-disc">
-        <img src="" alt="">
+<div class="disc-data"*ngIf="toShow" >
+    <button (click)="toShow=false" class="close-btn">X</button>
+    <div class="content-disc">
+        <div class="img-disc">
+            <img [src]="discData.image" alt="">
+        </div>
+        <div class="info-disc">
+            <ul>
+                <li><h3>{{discData.name}}</h3></li>
+                <li>{{discData.type}}</li>
+                <li>${{discData.price}}</li> 
+                <li>
+                    <app-store-quantity [disc]="discData" [max]="discData.stock" *ngIf="discData.stock"></app-store-quantity>
+                    <p *ngIf="discData.stock == 0">Supero el stock</p>
+                </li>
+                <li>
+                    <button (click)="addToCart(discData);">Agregar al carrito</button>
+                    <button [routerLink]="['/store']">Ver carrito</button>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="info-disc">
-        <ul>
-            <li>{{discData.name}}</li>
-            <li>{{discData.type}}</li>
-            <li>{{discData.price}}</li> 
-            <li>
-               <app-store-quantity [disc]="discData" [max]="discData.quantity" *ngIf="discData.stock"></app-store-quantity>
-                <button (click)="addToCart(discData);mostrarBtn=true">Agregar al carrito</button>
-                <button  *ngIf="mostrarBtn" [routerLink]="['/store']">Ver carrito</button>
-            </li>
-        </ul>
-    </div>
-
 </div>
 

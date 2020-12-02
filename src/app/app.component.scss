@@ -1,28 +1,42 @@
 header{
-    background-color: aqua;
-    nav{
-        background-color: burlywood;
-        .nav-bar{
-            display: flex;
-            flex-direction: row;
-            margin: 20px;
-            li{
-                list-style: none;
-                color: cadetblue;
-                padding: 20px;
-                font-size: "40px";
-            } 
-            li a{
-                text-decoration: none;
-            }
-            img{
-                width: 200px;
-            };
-        }
+    display: flex;
+    flex-direction: row;
+    background-color: #eff5ff;
+    box-shadow: 3px 3px 5px #5c617acc;
+    .image-header img{
+        margin: 10px 250px;
+        width: 150px;
     }
 }
+nav{
+    width: 100%;
+    margin-top: 30px;
+    ul{
+        display: flex;
+        flex-direction: row;
+        li{
+            list-style: none;
+            color: rgb(190, 230, 231);
+            padding: 30px;
+        } 
+        li a{
+            text-decoration: none;
+            font-size: 30px; 
+            padding: 5px;
+            color: #393b44;
+        }
+        li .nav-bar:hover{
+            font-size: 35px;
+            border-bottom: 1px solid #393b44;
+        }
+    }
+    .carrito img{
+        width: 20px;       
+    }
+}
+
 footer{
-    background-color: #768694;
+    background-color: #6178e0b0;
     width:100%;
     padding: 50px;
     p{

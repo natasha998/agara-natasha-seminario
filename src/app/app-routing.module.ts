@@ -7,11 +7,11 @@ import { DiscStoreComponent } from './disc-store/disc-store.component';
 const routes: Routes = [
   {
     path:'',
-    redirectTo:'nosotros',
+    redirectTo:'home',
     pathMatch:'full',
   },
   {
-    path:'nosotros',
+    path:'home',
     component:DiscListComponent,
   },
   {

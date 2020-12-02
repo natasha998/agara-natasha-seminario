@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { discardPeriodicTasks } from '@angular/core/testing';
 import { Disc } from '../d-list';
 import { DiscCardService } from '../disc-card.service';
 
@@ -24,8 +25,11 @@ export class StoreQuantityComponent implements OnInit {
   }
 
   upQuantity(disc: Disc): void {
-    if(disc.stock < this.max){
+    if(disc.quantity < this.max){
       disc.quantity++;
+    }
+    else{
+      this.disc.stock = 0;
     }
   }
 
@@ -35,11 +39,10 @@ export class StoreQuantityComponent implements OnInit {
      }
    }
 
-   changeQuantity(event, disc: Disc): void{
-    if(event.code < disc.stock){
-      event.preventDefaul();
-    }
-
+   changeQuantity(disc: Disc): void{
+      if(disc.quantity >= disc.stock){
+        disc.quantity = 0;
+      }
    }
 
 
